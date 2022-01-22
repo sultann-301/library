@@ -19,7 +19,8 @@ function AddToLibrary(givenTitle, givenAuthor, givenPages, isRead) {
 }
 
 function renderLibrary(bookToFind) {
-  const book = myLibrary.find((elem) => (elem.title = bookToFind.title));
+  const book = myLibrary.find((elem) => elem.title === bookToFind.title);
+  console.log(book.title, book.pages);
   //make title and append title
   const card = document.createElement("div");
   card.classList.add("card");
@@ -122,8 +123,8 @@ confirmBtn.addEventListener("click", (e) => {
   const userAuthor = userAuthorInput.value;
   const userPages = userPagesInput.value;
   const userHasReadYet = hasReadYet.value;
-
   let newBook = AddToLibrary(userTitle, userAuthor, userPages, userHasReadYet);
+
   renderLibrary(newBook);
   userTitleInput.value = "";
   userAuthorInput.value = "";
