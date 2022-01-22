@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="icon" type="image/x-icon" href="book.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/eb76208163.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <h1 class="Title nav-item"><i class="fas fa-book"></i>LIBRARY</h1>
+        <button class="add-btn nav-item" book-add>Add Book</button>
+      </div>
+    </nav>
+    <div class="content">
+      <div class="form-container">
+        <form action="">
+          <h3>Add a Book</h3>
+          <label for="Title">Title</label>
+          <input type="text" name="Title" id="title" />
+          <label for="Author">Author</label>
+          <input type="text" name="Author" id="author" />
+          <label for="Pages">Pages</label>
+          <input type="text" name="Pages" id="pages" />
+
+          <label for="isRead">Read before: </label>
+          <input type="checkbox" name="isRead" id="readYet" />
+          <div class="btn-container">
+            <button type="submit" class="btn confirm-btn">Confirm</button>
+            <button class="btn btn-cancel">Cancel</button>
+          </div>
+        </form>
+      </div>
+      <div class="library-container"></div>
+    </div>
+  </body>
+</html>

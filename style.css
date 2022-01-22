@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;900&family=Rubik:wght@300;400;500;600&display=swap");
+
+body {
+  background-color: #ffefef;
+  margin: 0;
+  z-index: 1;
+}
+
+.container {
+  /* background-color: #92a9bd; */
+  background-color: #d3dedc;
+  display: flex;
+  justify-content: space-between;
+}
+.form-container {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-item {
+  margin: 40px;
+}
+
+.Title {
+  font-family: "Roboto Slab";
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.fa-book {
+  margin-right: 10px;
+  display: inline;
+}
+
+.add-btn {
+  flex-shrink: 1;
+  border: none;
+  background-color: #d3dedc;
+  color: black;
+  cursor: pointer;
+  font-family: "Rubik";
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.add-btn:hover {
+  transition: 0.3s;
+  color: #ffefef;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.library-container {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: minmax(240px, auto) repeat(4, auto);
+  grid-auto-flow: dense;
+  gap: 30px;
+  margin: 25px;
+  margin-right: 0;
+  min-height: 200px;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.card {
+  animation: popIn;
+  transition: 0.5s;
+  padding: 15px;
+  background-color: #92a9bd;
+  border-radius: 5px;
+  font-family: "Rubik";
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+
+  border: 10px solid #7c99ac;
+}
+
+.card > h3 {
+  align-self: center;
+  font-size: 1.5rem;
+  /* color: #ffefef; */
+  color: black;
+  font-weight: 600;
+}
+
+.card > p {
+  font-size: 1.25rem;
+}
+
+.Author,
+.pages,
+.readyet {
+  font-size: 1.25rem;
+
+  color: #ffefef;
+}
+
+.delete-btn {
+  border: none;
+  border-radius: inherit;
+  background-color: #d3dedc;
+  font-family: "Rubik";
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.btn:hover {
+  background-color: #d3dedc9f;
+}
+.btn-cancel:hover {
+  background-color: rgba(255, 0, 0, 0.527);
+}
+
+#checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #d3dedc;
+  border-radius: 100px;
+}
+#checkbox::after {
+  transition: 2s;
+}
+.form-container {
+  animation: popIn 2.5s 1s;
+  position: absolute;
+  border: 10px solid #90b8d3;
+  border-radius: 10px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  z-index: 2;
+  background-color: #b1cde6;
+  width: 30vw;
+  font-family: "Rubik";
+  font-weight: 300;
+}
+form {
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+form h3 {
+  font-size: 1.5rem;
+}
+form button {
+  font-family: "Rubik";
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #7caca1;
+  font-weight: 300;
+  font-size: 1.35rem;
+}
+form input {
+  margin: 10px;
+  width: auto;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  accent-color: rgb(53, 53, 53);
+}
+
+@media (max-width: 850px) {
+  .library-container {
+    grid-template-columns: repeat(2, auto) minmax(70px, auto);
+
+    grid-auto-flow: column;
+  }
+  .fa-book {
+    display: inline;
+  }
+
+  .form-container {
+    width: auto;
+  }
+}
